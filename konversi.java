@@ -8,6 +8,8 @@ class konversi{
 		
 		Scanner scan = new Scanner(System.in);
 		Stack biner = new Stack();
+		Stack oktal = new Stack();
+		Stack heksa = new Stack();
 
 		
 		boolean konvert = true;
@@ -36,9 +38,46 @@ class konversi{
 					sisa = data % 8;
 					data = data/8;
 					top++;
+					oktal.push(sisa);
 					
 					}
+		System.out.print("\n\nBILANGAN OKTAL = ");
+				for(top=top; top>=0; top--)
+					System.out.print(oktal.pop());
+					
+					
+				data = x;
+				top = -1;		
+				while(data>0){
+					sisa = data % 16;
+					data = data/16;
+					top++;
+					
+					if(sisa==10)
+						heksa.push("A");
+			
+					else if(sisa==11)
+						heksa.push("B");
+				
+					else if(sisa==12)
+						heksa.push("C");
+				
+					else if(sisa==13)
+						heksa.push("D");
+				
+					else if(sisa==14)
+						heksa.push("E");
+				
+					else if(sisa==15)
+						heksa.push("F");
+				
+					else 
+						heksa.push(sisa);
+					}
 		
+				System.out.print("\n\nBILANGAN HEKSA = ");
+				for(top=top; top>=0; top--)					
+					System.out.print(heksa.pop());
 				
 				boolean ulang = true;
 				while(ulang == true){
