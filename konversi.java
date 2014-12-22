@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.Stack;
-
+//dea
 class konversi{
 	public static void main(String[]args){
 		int x,top,data,sisa;
